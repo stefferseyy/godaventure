@@ -1,0 +1,62 @@
+#include <iostream> 
+
+int main() {
+  
+  int answer1, answer2, answer3;
+    
+  std::cout << "WELCOME.\n\nYou're in a dark forest, trees everywhere and only a small, slightly illuminated path that leads to darkness. Do you:\n1. Keep going down the darkened path\n2. Turn back";
+  
+  std::cin >> answer1;
+  
+  while (answer1 > 2 || answer1 < 1) {
+    std::cout << "You have defied instructions, mortal. Enter 1 OR 2: ";
+    std::cin >> answer1;
+    }
+      
+    if (answer1 == 1) {
+      std::cout << "You are transported to heaven. Now, you must play a game with 'god'. What is 'god''s favourite color?\n1. Blue\n2. Red\n3. Yellow\n4. Black\nEnter your NUMERICAL answer here: ";
+      std::cin >> answer2;
+      while (answer2 > 4 || answer2 < 1) {
+    std::cout << "You have defied instructions, mortal. Enter a number from 1-4: ";
+    std::cin >> answer2;
+    }
+      int i = 0;
+      while (answer2 != 4 && i < 2) {
+        std::cout << "Try again: ";
+        std::cin >> answer2;
+        while (answer2 > 4 || answer2 < 1) {
+    std::cout << "You have defied instructions, mortal. Enter a number from 1-4: ";
+    std::cin >> answer2;
+    }
+        i ++;
+      }
+    if (i >= 2) {
+      std::cout << "Your existence has been extinguished and you will be removed from the simulation.";
+      return 0;
+    } else {
+      std::cout << "You have become 'god'. Well done, mortal.\n";
+      return 0;
+    }
+      
+  } else {
+      std::cout << "You see a brightly-colored mushroom. Do you: \n1. Eat it! \n2. Ignore it. Whoever eats it is stupid.\nEnter answer: ";
+      std::cin >> answer3;
+      while (answer3 > 2 || answer3 < 1) {
+    std::cout << "You have defied instructions, mortal. Enter 1 OR 2: ";
+    std::cin >> answer3;
+    }
+    if (answer3 == 1) {
+      std::cout << "You gain superpowers and become 'god'. Congratulations!\n";
+      return 0;
+    } else {
+      std::cout << "Boring mortal. Your existence has been extinguished from the simulation.\n";
+      return 0;
+    }
+  }
+  
+  
+   
+    
+    
+  
+}
